@@ -16,7 +16,8 @@ CREATE TABLE ASSOCIADO (
     uf_associado CHAR(2),
     cel_associado VARCHAR(15),
     email_associado VARCHAR(50) NOT NULL UNIQUE,
-    sen_associado VARCHAR(255) NOT NULL 
+    sen_associado VARCHAR(255) NOT NULL
+);    
 
 CREATE TABLE COMERCIO (
     cnpj_comercio VARCHAR(18) PRIMARY KEY, 
@@ -60,4 +61,5 @@ CREATE TABLE RECUPERACAO_SENHA (
     token VARCHAR(100) NOT NULL,
     data_expiracao DATETIME NOT NULL,
     PRIMARY KEY (token)
+
 );
