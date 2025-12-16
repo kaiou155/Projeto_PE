@@ -146,7 +146,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             </div>
 
                             <button type="submit" class="btn btn-success w-100">Cadastrar</button>
-                            <a href="index.php" class="btn btn-link w-100 mt-2">Voltar</a>
+                            <a href="../index.html" class="btn btn-link w-100 mt-2">Voltar</a>
                         </form>
                     </div>
                 </div>
@@ -154,4 +154,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
     </div>
 </body>
+
 </html>
