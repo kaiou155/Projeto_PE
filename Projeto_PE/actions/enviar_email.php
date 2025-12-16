@@ -14,13 +14,13 @@ function enviarEmailRecuperacao($emailDestino, $token) {
         $mail->isSMTP();
         $mail->Host       = 'smtp.gmail.com';
         $mail->SMTPAuth   = true;
-        $mail->Username   = 'cittakaio@gmail.com';
-        $mail->Password   = 'djxw xtqh ltiu oqog';
+        $mail->Username   = 'cittakaio@gmail.com'; //trocar por seu email, ou usar site hospedado.
+        $mail->Password   = ''; // colocar sua senha de app, ou usar site hospedado.
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port       = 587;
         $mail->CharSet = 'UTF-8';
 
-        $mail->setFrom('cittakaio@gmail.com', 'Sistema de Cupons');
+        $mail->setFrom('cittakaio@gmail.com', 'Sistema de Cupons'); //trocar por seu email, ou usar site hospedado.
         $mail->addAddress($emailDestino);
 
         $link = "http://localhost/Projeto_PE/pages/nova_senha.php?token=" . $token;
@@ -42,4 +42,5 @@ function enviarEmailRecuperacao($emailDestino, $token) {
         return "Erro ao enviar: {$mail->ErrorInfo}";
     }
 }
+
 ?>
